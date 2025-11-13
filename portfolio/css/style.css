@@ -1,0 +1,237 @@
+:root{
+  --bg1: #0b0810;
+  --bg2: #141025;
+  --accent-start: #7b3cff;
+  --accent-end: #ff4fc1;
+  --card-bg: rgba(255,255,255,0.02);
+  --glass: rgba(255,255,255,0.03);
+  --muted: #bdb6d3;
+  --radius: 12px;
+  --max-w:1100px;
+  --accent: linear-gradient(90deg,var(--accent-start),var(--accent-end));
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient( circle at 10% 30%, rgba(123,60,255,0.12), transparent 8%),
+              radial-gradient( circle at 90% 70%, rgba(255,79,193,0.08), transparent 10%),
+              linear-gradient(180deg,var(--bg1), var(--bg2));
+  color:#f4f2fa;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  justify-content:center;
+  padding:18px;
+}
+
+/* container */
+.site{
+  width:100%;
+  max-width:var(--max-w);
+  margin:16px;
+}
+
+/* topbar */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 6px;
+  background:rgba(255,255,255,0.02);
+  border-radius:8px;
+  font-size:14px;
+}
+.brand{font-weight:700; color:#ffeaff; letter-spacing:0.6px}
+.nav a{color:var(--muted); margin:0 8px; text-decoration:none; font-size:13px}
+.nav a:hover{color:#fff}
+.social a{color:var(--muted); margin-left:8px; text-decoration:none}
+
+/* Hero */
+.hero{
+  display:flex;
+  gap:30px;
+  align-items:flex-start;
+  padding:44px 12px;
+  min-height:320px;
+}
+.hero-left{flex:1; max-width:520px; padding-left:8px}
+.lead-sm{opacity:0.8; margin:0 0 8px}
+.hero-name{font-family:Montserrat, sans-serif; font-size:48px; margin:0 0 8px; line-height:1}
+.hero-sub{color:var(--muted); max-width:48ch; margin-bottom:18px}
+.btn-cv{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 12px 40px rgba(123,60,255,0.16);
+  font-weight:600;
+}
+
+/* portrait */
+/* hero right section */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;     /* push image to the right */
+  align-items: center;           /* vertically center */
+  padding-right: 20px;
+  position: relative;            /* required for glow */
+}
+
+/* purple glow behind image */
+.hero-right::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);   /* perfect vertical center */
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle,
+    rgba(123, 60, 255, 0.35),
+    rgba(255, 79, 193, 0.15),
+    transparent 70%
+  );
+  filter: blur(45px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* the portrait image */
+.hero-right img {
+  width: 430px;                  /* bigger, cleaner look */
+  max-width: 95%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+  object-fit: cover;
+  position: relative;            /* above glow */
+  z-index: 2;
+}
+
+
+/* sections */
+.section{
+  padding:64px 12px;
+  text-align:center;
+}
+.section-title{
+  font-family:Montserrat, sans-serif;
+  font-weight:800;
+  margin:0 0 8px;
+  letter-spacing:1.2px;
+}
+.section-sub{color:var(--muted); margin:6px 0 28px; font-size:13px}
+
+/* skills grid */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  margin-top:18px;
+  align-items:start;
+}
+.skill-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;
+  padding:18px;
+  text-align:left;
+  box-shadow: 0 10px 30px rgba(5,3,10,0.6);
+}
+.skill-card h3{margin:0 0 12px; font-size:16px; color:#eae6ff}
+.pills{display:flex; flex-wrap:wrap; gap:8px}
+.pills span{
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.03);
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* timeline / center marker */
+.dark-section{background:linear-gradient(180deg, rgba(0,0,0,0.06), transparent)}
+.timeline-wrap{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:center;
+  margin-top:28px;
+}
+.card-floating{
+  width:300px;
+  padding:16px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.05);
+  background:var(--card-bg);
+  text-align:left;
+  transform: translateY(0);
+}
+.muted{color:var(--muted); font-size:13px; margin-top:6px;}
+
+/* center vertical line & dot */
+.timeline-center{width:80px; position:relative; height:120px; display:flex; align-items:center; justify-content:center}
+.center-line{width:2px; height:80px; background:rgba(255,255,255,0.06)}
+.center-dot{
+  width:28px; height:28px; border-radius:50%;
+  background:linear-gradient(90deg, rgba(123,60,255,0.95), rgba(255,79,193,0.9));
+  position:absolute;
+  box-shadow:0 8px 24px rgba(123,60,255,0.18);
+}
+
+/* contact */
+.contact-wrap{display:flex; justify-content:center; margin-top:18px}
+.contact-card{
+  width:360px;
+  padding:18px;
+  border-radius:10px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 20px 60px rgba(3,3,10,0.6);
+  text-align:left;
+}
+.contact-card h3{margin:0 0 10px; font-size:18px}
+.contact-card input,
+.contact-card textarea{
+  width:100%;
+  padding:10px 12px;
+  margin:8px 0;
+  border-radius:6px;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  color:#fff;
+  font-size:14px;
+}
+.contact-card textarea{resize:vertical}
+.btn-send{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:0;
+  background:var(--accent);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+/* footer */
+.footer{padding:28px 0; text-align:center; color:var(--muted)}
+.footer-nav a{color:var(--muted); margin:0 6px; font-size:13px; text-decoration:none}
+
+/* responsive */
+@media (max-width:900px){
+  .skills-grid{grid-template-columns:1fr}
+  .hero-right img{display:none}
+  .hero-name{font-size:40px}
+  .hero{padding:28px 4px}
+  .timeline-wrap{flex-direction:column; gap:12px}
+  .timeline-center{transform:rotate(0); width:40px; height:40px}
+  .center-line{display:none}
+}

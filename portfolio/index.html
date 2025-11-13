@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anshika — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="site">
+    <header class="topbar">
+      <div class="brand">&lt; Anshika / Yadav &gt;</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+      </nav>
+      <div class="social"> <!-- small placeholders -->
+        <a href="https://github.com/Anshi2111" aria-label="github">Github</a>
+        <a href="https://www.linkedin.com/in/anshika-yadav-3ab8a932a" aria-label="linkedin">LinkedIn</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO / Intro -->
+      <section class="hero" id="home">
+        <div class="hero-left">
+          <p class="lead-sm">Hi, I am</p>
+          <h1 class="hero-name">Anshika</h1>
+          <br></br>
+          <p class="hero-sub">I study in KC College of Engineering.I am aspiring to become a full stack developer with mern stack.At start I faced various difficulties due to lack of direction but I am trying my best to adapt</p>
+           <br></br>
+          <a class="btn-cv" href="assets/resume.pdf" download>DOWNLOAD CV</a>
+        </div>
+        <div class="hero-right" aria-hidden="true">
+          <img src="images/portrait.jpg" alt="portrait" />
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <h2 class="section-title">SKILLS</h2>
+        <p class="section-sub">A collection of my technical skills and expertise</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Frontend</h3>
+            <div class="pills">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+          </div>
+
+          <div class="skill-card">
+            <h3>Backend</h3>
+            <div class="pills">
+              <span>Node.js</span>
+          </div>
+
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <div class="pills">
+              <span>C</span><span>C++</span><span>Java</span><span>Python</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <div class="pills">
+             <span>VS Code</span><span>Netlify</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE / EDUCATION -->
+      <section id="experience" class="section dark-section">
+        <h2 class="section-title">EXPERIENCE</h2>
+        <p class="section-sub">A collection of my work experience and roles</p>
+
+        <!-- Timeline / education center marker -->
+        <div class="timeline-wrap">
+          <div class="timeline-left card-floating">
+            <h4>Smartbridge Internship-Full stack</h4>
+            <p class="muted">1 month with project development</p>
+          </div>
+        <div class="timeline-center">
+            <div class="center-line"></div>
+            <div class="center-dot"></div>
+          </div>
+
+          <div class="timeline-right card-floating">
+            <h4>AICTE Google-aiml Internship</h4>
+            <p>10 week remote</p>
+           
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h2 class="section-title">CONTACT</h2>
+        <p class="section-sub">I'd love to hear from you — reach out for any opportunities or questions!</p>
+
+        <div class="contact-wrap">
+          <form class="contact-card" id="contactForm">
+            <h3>Connect With Me 🚀</h3>
+            <input placeholder="Your Email" type="email" required name="email">
+            <input placeholder="Your Name" type="text" required name="name">
+            <input placeholder="Subject" type="text" name="subject">
+            <textarea placeholder="Message" name="message" rows="5"></textarea>
+            <button class="btn-send" type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="copyright">© <span id="year"></span> Anshika Yadav</p>
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+        </nav>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
