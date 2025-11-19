@@ -1,0 +1,86 @@
+:root{
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-2: #ec4899;
+  --shadow: 0 10px 30px rgba(15,23,42,0.06);
+  --radius: 12px;
+  --pad: 18px;
+  --gap: 10px;
+  --maxw: 420px;
+  font-family: Inter, system-ui, Roboto, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; background:linear-gradient(180deg,#eef2fb,#f8fafc); color:#0f1724}
+.wrap{min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; flex-direction:column; gap:12px}
+
+.calculator{
+  width:100%; max-width:var(--maxw);
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(15,23,42,0.04);
+}
+
+.display{
+  background: linear-gradient(90deg, rgba(79,70,229,0.03), rgba(236,72,153,0.02));
+  padding:18px;
+  border-radius:10px;
+  margin-bottom:12px;
+  min-height:70px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  overflow:hidden;
+}
+.display .prev{
+  color:var(--muted);
+  font-size:14px;
+  text-align:right;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.display .current{
+  font-size:28px;
+  font-weight:700;
+  text-align:right;
+  word-break:break-all;
+}
+
+.keys{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:var(--gap);
+}
+
+.btn{
+  background:linear-gradient(180deg, #fff, #fbfbff);
+  border-radius:10px;
+  padding:14px 10px;
+  border:1px solid rgba(15,23,42,0.04);
+  font-weight:700;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(16,24,40,0.04);
+  transition:transform 130ms, box-shadow 130ms;
+  user-select:none;
+}
+.btn:active{transform:translateY(1px)}
+.btn:hover{transform:translateY(-4px)}
+.btn.op{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; box-shadow:0 12px 30px rgba(79,70,229,0.12)}
+.btn.equals{grid-column: 4 / 5; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:white}
+.btn.wide{grid-column: 1 / 3}
+.btn.zero{grid-column: 1 / 3; text-align:left; padding-left:22px}
+
+.hint{font-size:13px;color:var(--muted); margin-top:8px; text-align:center; max-width:420px}
+
+@media (max-width:420px){
+  .display .current{font-size:24px}
+  .btn{padding:12px 8px; font-size:15px}
+  .btn.zero{padding-left:16px}
+}
