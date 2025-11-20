@@ -1,4 +1,4 @@
-# CODSOFT Web Development Internship
+# CODSOFT Internship
 
 This repository contains the three tasks completed as part of the **CODSOFT Web Development Internship**.
 
