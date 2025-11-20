@@ -33,7 +33,7 @@ It performs basic arithmetic operations such as **addition, subtraction, multipl
 └── ✨ script.js  
 ```
 ## Preview
-<img width="531" height="357" alt="image" src="https://github.com/Anshi2111/CODSOFT/blob/main/calculator/Screenshot3/calcy.png"/>
+<img width="531" height="357" alt="image" src="https://github.com/Anshi2111/CODSOFT/blob/main/codesoft_level1(Task-3)/Screenshot3/calcy.png"/>
 
 ## 📦 How to Run
 1. Download or clone the repository  
